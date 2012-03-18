@@ -1,7 +1,8 @@
 <?php // 簡易RSSリーダの例
+require_once 'common.php';
 function showItem ($title, $link, $date = null) {
-  $date = date('Y-m-d', strtotime($date));
-  echo "<li><a href=\"{$link}\">{$title} ({$date})</a></li>";
+  printf('<li><a href="%s">%s (%s)</a></li>',
+    chk_link($link), hs($title), date('Y-m-d', strtotime($date)));
 }
 
 $xml = 'phpnews.xml';
