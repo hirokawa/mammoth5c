@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <channel rdf:about="http://www.example.com/">
+  <title>PHPニュース</title>
+  <description>PHP関連のニュース</description>
+  <link>http://www.example.com/</link>
+  <items><rdf:Seq>
+      <rdf:li rdf:resource="http://www.php.net/downloads.php#v5.3.3" />
+      <rdf:li rdf:resource="http://www.php.net/downloads.php#v5.2.14" />
+  </rdf:Seq></items>
+ </channel>
+ <item rdf:about="http://www.php.net/downloads.php#v5.3.3">
+  <title>PHP 5.3.3公開</title>
+  <link>http://www.php.net/downloads.php#v5.3.3</link>
+  <dc:date>2010-07-22</dc:date>
+ </item>
+ <item rdf:about="http://www.php.net/downloads.php#v5.2.14">
+  <title>PHP 5.2.14公開</title>
+  <link>http://www.php.net/downloads.php#v5.2.14</link>
+  <dc:date>2010-07-22</dc:date>
+ </item>
+</rdf:RDF>

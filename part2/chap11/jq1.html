@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"><title>サンプル</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" 
+    href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css"/>
+  <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js">
+  </script>
+ </head>
+ <body>
+ <script type="text/javascript">
+ $("#main").live('pageinit',function() {
+  $("#testform").submit(function() {
+   $.post("mbsearch.php", $("#testform").serialize(),
+   function(data){
+    $.each(data,function(i) {
+     $("ul").append('<li>'+this.content+'</li>').listview('refresh');     
+    });
+   },"json");
+   return false;
+  });
+ });
+ </script>
+
+ <div data-role="page" id="main">
+  <div data-role="header"><h1>マイクロブログ検索</h1></div>
+  <div data-role="content">
+   <form id="testform" data-theme="a">
+    <input type="search" name="key" />
+   </form>
+   <ul data-role="listview" data-inset="true" data-theme="a"></ul>
+  </div>
+ </div>
+</body></html>

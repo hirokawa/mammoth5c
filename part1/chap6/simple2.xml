@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<members xmlns="http://example.com/list" 
+         xmlns:ad="http://example.com/address">
+ <person id="a1">
+  <name>鈴木太郎</name>
+  <ad:name>東京</ad:name>
+ </person>
+</members>
